@@ -21,3 +21,8 @@
 
 en:
   hello: "Hello world"
+  app_title: BuyMyStuff
+
+  home:
+   home:
+    title: BuyMyStuff
