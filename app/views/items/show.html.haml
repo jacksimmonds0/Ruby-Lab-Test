@@ -13,6 +13,8 @@
   %b Status:
   = @item.status
 
+%p= link_to t('.addbid'), new_bid_path(item_id: @item)
+
 = link_to 'Edit', edit_item_path(@item)
 \|
 = link_to 'Back', items_path
