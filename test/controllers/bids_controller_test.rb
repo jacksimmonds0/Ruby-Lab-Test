@@ -13,7 +13,7 @@ class BidsControllerTest < ActionController::TestCase
   end
 
   test "should get new" do
-    get :new
+    get :new, item_id: @item
     assert_response :success
   end
 

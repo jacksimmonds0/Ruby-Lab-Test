@@ -8,7 +8,8 @@
 
   .field
     = f.label :item
-    = f.text_field :item
+    %p= @bid.item.title
+    = f.hidden_field :item_id, value: @bid.item.id
   .field
     = f.label :bidder
     = f.text_field :bidder

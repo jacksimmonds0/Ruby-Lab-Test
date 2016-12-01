@@ -13,6 +13,16 @@
   %b Status:
   = @item.status
 
+%p Bids:
+%table
+  %tbody
+    - @item.bids.each do |bid|
+      %tr
+        %td= bid.title
+        %td= link_to 'Show', bid
+        %td= link_to 'Edit', edit_bid_path(bid)
+        %td= link_to 'Destroy', bid, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
 %p= link_to t('.addbid'), new_bid_path(item_id: @item)
 
 = link_to 'Edit', edit_item_path(@item)
