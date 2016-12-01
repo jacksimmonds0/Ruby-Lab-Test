@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+firstItem = Item.where(title: 'First Item').first
+firstItem.delete if firstItem
+
+item = Item.create([title: 'First Item', description: 'This is the first item in the list', seller: 'Joe Bloggs', status:1])
+

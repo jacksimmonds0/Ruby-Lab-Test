@@ -3,7 +3,7 @@
 %table
   %thead
     %tr
-      %th Tite
+      %th Title
       %th Description
       %th Seller
       %th Status
@@ -14,7 +14,7 @@
   %tbody
     - @items.each do |item|
       %tr
-        %td= item.tite
+        %td= item.title
         %td= item.description
         %td= item.seller
         %td= item.status
