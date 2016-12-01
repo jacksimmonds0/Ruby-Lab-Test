@@ -3,6 +3,7 @@ require 'test_helper'
 class BidsControllerTest < ActionController::TestCase
   setup do
     @bid = bids(:one)
+    @item = items(:one)
   end
 
   test "should get index" do
@@ -18,7 +19,7 @@ class BidsControllerTest < ActionController::TestCase
 
   test "should create bid" do
     assert_difference('Bid.count') do
-      post :create, bid: { bidder: @bid.bidder, item_id: @bid.item_id, value: @bid.value }
+      post :create, bid: { bidder: @bid.bidder, item_id: @item, value: @bid.value }
     end
 
     assert_redirected_to bid_path(assigns(:bid))
@@ -35,7 +36,7 @@ class BidsControllerTest < ActionController::TestCase
   end
 
   test "should update bid" do
-    patch :update, id: @bid, bid: { bidder: @bid.bidder, item_id: @bid.item_id, value: @bid.value }
+    patch :update, id: @bid, bid: { bidder: @bid.bidder, item_id: @item, value: @bid.value }
     assert_redirected_to bid_path(assigns(:bid))
   end
 
