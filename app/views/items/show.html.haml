@@ -18,7 +18,8 @@
   %tbody
     - @item.bids.each do |bid|
       %tr
-        %td= bid.title
+        %td= bid.bidder
+        %td= bid.value
         %td= link_to 'Show', bid
         %td= link_to 'Edit', edit_bid_path(bid)
         %td= link_to 'Destroy', bid, :method => :delete, :data => { :confirm => 'Are you sure?' }

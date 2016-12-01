@@ -25,6 +25,8 @@ en:
   home:
    home:
     title: BuyMyStuff
+    items: Items
+    footer: Jack Simmonds © 2016
 
   items:
    show:
